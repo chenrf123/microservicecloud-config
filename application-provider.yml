@@ -21,6 +21,11 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: eureka-provider8001
+mybatis-plus:
+  config-location: classpath:conf/mybatis-config.xml
+  type-aliases-package: com.cloud.entity
+  mapper-locations:
+  - classpath:mapper/**/*.xml
 ---
 server:
   port: 8002
@@ -40,6 +45,11 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: eureka-provider8002
+mybatis-plus:
+  config-location: classpath:conf/mybatis-config.xml
+  type-aliases-package: com.cloud.entity
+  mapper-locations: 
+  - classpath:mapper/**/*.xml
 ---
 server:
   port: 8003
@@ -59,3 +69,8 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: eureka-provider8003
+mybatis-plus:
+  config-location: classpath:conf/mybatis-config.xml
+  type-aliases-package: com.cloud.entity
+  mapper-locations: 
+  - classpath:mapper/**/*.xml
