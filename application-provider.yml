@@ -1,17 +1,12 @@
 spring:
   profiles:
-    active: dev
-
-#mybatis-plus:
-#  config-location: classpath:conf/mybatis-com.cloud.config.xml
-#  type-aliases-package: com.cloud.entity
-#  mapper-locations: classpath:mapper/**/*.xml
-
+    active:
+      - 8001
 ---
 server:
-  port: dev
-
+  port: 8001
 spring:
+  profiles: 8001
   application:
     name: eureka-provider
   datasource:
@@ -19,7 +14,6 @@ spring:
     url: jdbc:mysql://localhost:3306/cloudDB01
     username: root
     password: 123456
-
 eureka:
   client:
     service-url:
@@ -27,17 +21,15 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: eureka-provider8001
-
 mybatis-plus:
   config-location: classpath:conf/mybatis-com.cloud.config.xml
   type-aliases-package: com.cloud.entity
   mapper-locations: classpath:mapper/**/*.xml
-
 ---
 server:
-  port: test
-
+  port: 8002
 spring:
+  profiles: 8002
   application:
     name: eureka-provider
   datasource:
@@ -45,7 +37,6 @@ spring:
     url: jdbc:mysql://localhost:3306/cloudDB02
     username: root
     password: 123456
-
 eureka:
   client:
     service-url:
@@ -53,17 +44,15 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: eureka-provider8002
-
 mybatis-plus:
   config-location: classpath:conf/mybatis-com.cloud.config.xml
   type-aliases-package: com.cloud.entity
   mapper-locations: classpath:mapper/**/*.xml
-
 ---
 server:
-  port: prd
-
+  port: 8003
 spring:
+  profiles: 8003
   application:
     name: eureka-provider
   datasource:
@@ -71,7 +60,6 @@ spring:
     url: jdbc:mysql://localhost:3306/cloudDB03
     username: root
     password: 123456
-
 eureka:
   client:
     service-url:
@@ -79,7 +67,6 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: eureka-provider8003
-
 mybatis-plus:
   config-location: classpath:conf/mybatis-com.cloud.config.xml
   type-aliases-package: com.cloud.entity
