@@ -1,0 +1,86 @@
+spring:
+  profiles:
+    active: 8001
+
+#mybatis-plus:
+#  config-location: classpath:conf/mybatis-com.cloud.config.xml
+#  type-aliases-package: com.cloud.entity
+#  mapper-locations: classpath:mapper/**/*.xml
+
+---
+server:
+  port: 8001
+
+spring:
+  application:
+    name: eureka-provider
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cloudDB01
+    username: root
+    password: 123456
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka.com:7001/eureka/,http://eureka.com:7002/eureka/,http://eureka.com:7003/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: eureka-provider8001
+
+mybatis-plus:
+  config-location: classpath:conf/mybatis-com.cloud.config.xml
+  type-aliases-package: com.cloud.entity
+  mapper-locations: classpath:mapper/**/*.xml
+
+---
+server:
+  port: 8002
+
+spring:
+  application:
+    name: eureka-provider
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cloudDB02
+    username: root
+    password: 123456
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka.com:7001/eureka/,http://eureka.com:7002/eureka/,http://eureka.com:7003/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: eureka-provider8002
+
+mybatis-plus:
+  config-location: classpath:conf/mybatis-com.cloud.config.xml
+  type-aliases-package: com.cloud.entity
+  mapper-locations: classpath:mapper/**/*.xml
+
+---
+server:
+  port: 8003
+
+spring:
+  application:
+    name: eureka-provider
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cloudDB03
+    username: root
+    password: 123456
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka.com:7001/eureka/,http://eureka.com:7002/eureka/,http://eureka.com:7003/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: eureka-provider8003
+
+mybatis-plus:
+  config-location: classpath:conf/mybatis-com.cloud.config.xml
+  type-aliases-package: com.cloud.entity
+  mapper-locations: classpath:mapper/**/*.xml
