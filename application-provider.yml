@@ -8,7 +8,7 @@ server:
 spring:
   profiles: 8001
   application:
-    name: eureka-provider
+    name: eureka-provider1
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/cloudDB01
@@ -48,7 +48,7 @@ eureka:
 mybatis-plus:
   config-location: classpath:conf/mybatis-config.xml
   type-aliases-package: com.cloud.entity
-  mapper-locations: 
+  mapper-locations:
   - classpath:mapper/**/*.xml
 ---
 server:
@@ -72,5 +72,5 @@ eureka:
 mybatis-plus:
   config-location: classpath:conf/mybatis-config.xml
   type-aliases-package: com.cloud.entity
-  mapper-locations: 
+  mapper-locations:
   - classpath:mapper/**/*.xml
