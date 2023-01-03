@@ -8,7 +8,7 @@ server:
 spring:
   profiles: 8001
   application:
-    name: eureka-provider1
+    name: eureka-provider11
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/cloudDB01
@@ -32,7 +32,7 @@ server:
 spring:
   profiles: 8002
   application:
-    name: eureka-provider2
+    name: eureka-provider22
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/cloudDB02
@@ -56,7 +56,7 @@ server:
 spring:
   profiles: 8003
   application:
-    name: eureka-provider3
+    name: eureka-provider33
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/cloudDB03
