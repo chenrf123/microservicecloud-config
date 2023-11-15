@@ -24,8 +24,5 @@ eureka:
   client: 
     service-url: 
       defaultZone: http://eureka-test.com:7001/eureka/
-
-info:
-  version: 1.0
  
 
